@@ -22,114 +22,32 @@
     <section class="content">
       <div class="container">
         <div class="filterContainer">
-          <div>
-            <input placeholder="Search for a country..." />
+          <div class="searchContainer">
+            <img src="assets/search.svg" class="searchIcon" onclick="" />
+            <input placeholder="Search for a country..." class="searchInput" />
           </div>
 
           <div class="dropdown">
-            <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+            <button onclick="myFunction()" class="dropbtn">
+              Filter by Region<img
+                src="assets/chevron-down.svg"
+                class="dropIcon"
+              />
+            </button>
             <div id="myDropdown" class="dropdown-content">
-              <a href="#">Link 1</a>
-              <a href="#">Link 2</a>
-              <a href="#">Link 3</a>
+              <a href="#">Africa</a>
+              <a href="#">America</a>
+              <a href="#">Asia</a>
+              <a href="#">Europe</a>
+              <a href="#">Oceania</a>
             </div>
           </div>
         </div>
       </div>
     </section>
     <section class="itemsList">
-      <div class="container">
-        <div class="countryCard">
-          <img src="https://restcountries.eu/data/afg.svg" alt="country flag" />
-          <div class="cardInfosContainer">
-            <h3 class="cardTitle">Germany</h3>
-            <div class="cardInfoLine">
-              <p>Population:</p>
-              <p>81,770,900</p>
-            </div>
-            <div class="cardInfoLine">
-              <p>Region:</p>
-              <p>81,770,900</p>
-            </div>
-            <div class="cardInfoLine">
-              <p>Capital:</p>
-              <p>Berlin</p>
-            </div>
-          </div>
-        </div>
-        <div class="countryCard">
-          <img src="https://restcountries.eu/data/afg.svg" alt="country flag" />
-          <div class="cardInfosContainer">
-            <h3>Germany</h3>
-            <div class="cardInfoLine">
-              <p>Population:</p>
-              <p>81,770,900</p>
-            </div>
-            <div class="cardInfoLine">
-              <p>Region:</p>
-              <p>81,770,900</p>
-            </div>
-            <div class="cardInfoLine">
-              <p>Capital:</p>
-              <p>Berlin</p>
-            </div>
-          </div>
-        </div>
-        <div class="countryCard">
-          <img src="https://restcountries.eu/data/afg.svg" alt="country flag" />
-          <div class="cardInfosContainer">
-            <h3>Germany</h3>
-            <div class="cardInfoLine">
-              <p>Population:</p>
-              <p>81,770,900</p>
-            </div>
-            <div class="cardInfoLine">
-              <p>Region:</p>
-              <p>81,770,900</p>
-            </div>
-            <div class="cardInfoLine">
-              <p>Capital:</p>
-              <p>Berlin</p>
-            </div>
-          </div>
-        </div>
-        <div class="countryCard">
-          <img src="https://restcountries.eu/data/afg.svg" alt="country flag" />
-          <div class="cardInfosContainer">
-            <h3>Germany</h3>
-            <div class="cardInfoLine">
-              <p>Population:</p>
-              <p>81,770,900</p>
-            </div>
-            <div class="cardInfoLine">
-              <p>Region:</p>
-              <p>81,770,900</p>
-            </div>
-            <div class="cardInfoLine">
-              <p>Capital:</p>
-              <p>Berlin</p>
-            </div>
-          </div>
-        </div>
-        <div class="countryCard">
-          <img src="https://restcountries.eu/data/afg.svg" alt="country flag" />
-          <div class="cardInfosContainer">
-            <h3>Germany</h3>
-            <div class="cardInfoLine">
-              <p>Population:</p>
-              <p>81,770,900</p>
-            </div>
-            <div class="cardInfoLine">
-              <p>Region:</p>
-              <p>81,770,900</p>
-            </div>
-            <div class="cardInfoLine">
-              <p>Capital:</p>
-              <p>Berlin</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div class="container" id="cardsList"></div>
     </section>
+    <script type="text/javascript" src="script/index.js"></script>
   </body>
 </html>
