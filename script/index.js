@@ -10,6 +10,7 @@ async function getAllCountries() {
 }
 
 function putInList(countries) {
+  cardListContainer.innerHTML = "";
   const countriesList = countries.map((country) => getCardObj(country));
 
   countriesList.map((country) => {
@@ -19,7 +20,7 @@ function putInList(countries) {
 
 function getCardObj(country) {
   return `
-  <button class="countryCard">
+  <button class="countryCard" onclick="location.href='CountryDetails.html?countryName=${country.name}'">
   <img src="${country.flag}" alt="country flag" />
   <div class="cardInfosContainer">
     <h3 class="cardTitle">${country.name}</h3>
@@ -38,6 +39,19 @@ function getCardObj(country) {
   </div>
 </button>
   `;
+}
+
+async function selectRegion(region) {
+  const response = await fetch(
+    `https://restcountries.eu/rest/v2/region/${region}`,
+    {
+      method: "GET",
+    }
+  );
+
+  const formattedRes = await response.json();
+
+  putInList(formattedRes);
 }
 
 function myFunction() {
