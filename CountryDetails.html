@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/site.webmanifest" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" type="text/css" href="styles/css-reset.css" />
+    <link rel="stylesheet" type="text/css" href="styles/country-details.css" />
+
+    <title>REST Countries</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <h1>Where in the world?</h1>
+      </div>
+    </nav>
+    <section class="content">
+      <div class="container">
+        <div class="filterContainer">
+          <button class="backButton" onclick="location.href='index.html'">
+            <img src="assets/arrow-left.svg" class="dropIcon" />
+            Back
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="content">
+      <div class="container countryContainer" id="countryContainer">
+        <img src="assets/loading-gif-transparent-10.gif" class="loadingBar" />
+      </div>
+    </section>
+    <script type="text/javascript" src="script/countryDetails.js"></script>
+  </body>
+</html>

@@ -13,6 +13,10 @@ a {
   width: 70%;
 }
 
+.loadingBar {
+  width: 100px;
+}
+
 .navbar {
   background-color: hsl(209, 23%, 22%);
   display: flex;

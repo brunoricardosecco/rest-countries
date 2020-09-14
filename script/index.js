@@ -2,6 +2,8 @@ const cardListContainer = document.getElementById("cardsList");
 const searchInput = document.getElementById("searchInput");
 
 async function getAllCountries() {
+  cardListContainer.innerHTML =
+    "<img src='assets/loading-gif-transparent-10.gif' class='loadingBar' />";
   const response = await fetch("https://restcountries.eu/rest/v2/all", {
     method: "GET",
   });
@@ -11,9 +13,8 @@ async function getAllCountries() {
 }
 
 function putInList(countries) {
-  cardListContainer.innerHTML = "";
   const countriesList = countries.map((country) => getCardObj(country));
-
+  cardListContainer.innerHTML = "";
   countriesList.map((country) => {
     cardListContainer.innerHTML += country;
   });
@@ -43,6 +44,8 @@ function getCardObj(country) {
 }
 
 async function selectRegion(region) {
+  cardListContainer.innerHTML =
+    "<img src='assets/loading-gif-transparent-10.gif' class='loadingBar' />";
   const response = await fetch(
     `https://restcountries.eu/rest/v2/region/${region}`,
     {
@@ -60,7 +63,8 @@ async function filterByName() {
     getAllCountries();
     return;
   }
-
+  cardListContainer.innerHTML =
+    "<img src='assets/loading-gif-transparent-10.gif' class='loadingBar' />";
   const response = await fetch(
     `https://restcountries.eu/rest/v2/name/${searchInput.value}`,
     {
