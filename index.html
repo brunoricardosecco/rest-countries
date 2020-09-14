@@ -23,8 +23,17 @@
       <div class="container">
         <div class="filterContainer">
           <div class="searchContainer">
-            <img src="assets/search.svg" class="searchIcon" onclick="" />
-            <input placeholder="Search for a country..." class="searchInput" />
+            <img
+              src="assets/search.svg"
+              class="searchIcon"
+              onclick="filterByName()"
+            />
+            <input
+              placeholder="Search for a country..."
+              class="searchInput"
+              id="searchInput"
+              onsubmit="filterByName()"
+            />
           </div>
 
           <div class="dropdown">

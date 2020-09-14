@@ -1,4 +1,5 @@
 const cardListContainer = document.getElementById("cardsList");
+const searchInput = document.getElementById("searchInput");
 
 async function getAllCountries() {
   const response = await fetch("https://restcountries.eu/rest/v2/all", {
@@ -53,6 +54,29 @@ async function selectRegion(region) {
 
   putInList(formattedRes);
 }
+
+async function filterByName() {
+  if (searchInput.value === "") {
+    getAllCountries();
+    return;
+  }
+
+  const response = await fetch(
+    `https://restcountries.eu/rest/v2/name/${searchInput.value}`,
+    {
+      method: "GET",
+    }
+  );
+
+  const formattedRes = await response.json();
+  putInList(formattedRes);
+}
+
+searchInput.addEventListener("keyup", (event) => {
+  if (event.key === "Enter") {
+    filterByName();
+  }
+});
 
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");

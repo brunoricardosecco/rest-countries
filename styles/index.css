@@ -54,6 +54,7 @@ a {
   width: 20px;
   fill: #ffffff;
   margin-right: 10px;
+  cursor: pointer;
 }
 
 .searchInput {
