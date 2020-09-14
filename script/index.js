@@ -19,7 +19,7 @@ function putInList(countries) {
 
 function getCardObj(country) {
   return `
-  <div class="countryCard">
+  <button class="countryCard">
   <img src="${country.flag}" alt="country flag" />
   <div class="cardInfosContainer">
     <h3 class="cardTitle">${country.name}</h3>
@@ -36,8 +36,25 @@ function getCardObj(country) {
       <p>${country.capital}</p>
     </div>
   </div>
-</div>
+</button>
   `;
 }
+
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+window.onclick = function (event) {
+  if (!event.target.matches(".dropbtn")) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains("show")) {
+        openDropdown.classList.remove("show");
+      }
+    }
+  }
+};
 
 getAllCountries();
